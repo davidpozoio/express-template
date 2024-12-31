@@ -1,0 +1,17 @@
+version: v1.0.0
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["${COMMAND:-dev}"]
+    ports:
+      - "${PORT}:${PORT_CONTAINER}"
+    volumes:
+      - ./.env:/app/.env
+      - ./src:/app/src
+      - ./dist:/app/dist
+      - ./assets:/app/assets
+      - ./bin:/app/bin
+    env_file:
+      - ./.env

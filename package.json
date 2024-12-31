@@ -1,0 +1,24 @@
+{
+  "name": "express-sequelize-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch src/server.ts",
+    "build": "./bin/build.sh",
+    "start": "./bin/start.sh",
+    "docker:dev": "./bin/docker-dev.sh",
+    "docker:prod": "./bin/docker-prod.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "esbuild": "0.24.2",
+    "tsx": "^4.19.2"
+  }
+}
