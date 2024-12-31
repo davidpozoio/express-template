@@ -1,4 +1,6 @@
 version: v1.0.0
+networks:
+  intern-network:
 services:
   backend:
     build:
@@ -15,3 +17,12 @@ services:
       - ./bin:/app/bin
     env_file:
       - ./.env
+    networks:
+      - intern-network
+    depends_on:
+      - database
+  database:
+    image: postgres:17.2-alpine3.21
+    env_file: ./.env
+    networks:
+      - intern-network
