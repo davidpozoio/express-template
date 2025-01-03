@@ -13,7 +13,7 @@ services:
       - ./.env:/app/.env
       - ./src:/app/src
       - ./dist:/app/dist
-      - ./assets:/app/assets
+      - ./public:/app/public
       - ./bin:/app/bin
     env_file:
       - ./.env

@@ -14,7 +14,14 @@ const globalErrorHandler = async (
         code: error.code,
       },
     });
+    return;
   }
+
+  res.status(500).json({
+    error: {
+      message: "there was an error",
+    },
+  });
 };
 
 export default globalErrorHandler;
