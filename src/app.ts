@@ -15,7 +15,7 @@ app.use("/health", async (req, res) => {
 app.get("*", (req, res) => {
   res
     .status(200)
-    .sendFile(path.join(__dirname, "../", "public/dist/index.html"));
+    .sendFile(path.join(__dirname, "../", "public/frontend/index.html"));
 });
 
 app.use(globalErrorHandler);
