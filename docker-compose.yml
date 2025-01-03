@@ -3,6 +3,7 @@ networks:
   intern-network:
 services:
   backend:
+    container_name: backend
     build:
       context: .
       dockerfile: Dockerfile
@@ -15,6 +16,7 @@ services:
       - ./dist:/app/dist
       - ./public:/app/public
       - ./bin:/app/bin
+      - ./:/app
     env_file:
       - ./.env
     networks:

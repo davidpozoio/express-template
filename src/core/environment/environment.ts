@@ -1,3 +1,7 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const ENV = {
   DATABASE_USER: process.env.DATABASE_USER,
   DATABASE_NAME: process.env.DATABASE_NAME,
