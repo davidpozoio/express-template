@@ -5,7 +5,7 @@ const globalErrorHandler = async (
   error: ErrorRequestHandler,
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   if (error instanceof HttpError) {
     res.status(error.statusCode).json({
