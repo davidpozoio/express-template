@@ -1,5 +1,6 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
-import HttpError from "../exception/http-error";
+import HttpError from "../exception/http-error.exception";
+import ValidationErrorException from "core/exception/validation.exception";
 
 const globalErrorHandler = async (
   error: ErrorRequestHandler,
@@ -17,8 +18,20 @@ const globalErrorHandler = async (
     return;
   }
 
+  if (error instanceof ValidationErrorException) {
+    res.status(error.statusCode).json({
+      error: {
+        ...error.errorObject,
+        message: error.message,
+        code: error.code,
+      },
+    });
+    return;
+  }
+
   res.status(500).json({
     error: {
+      ...error,
       message: "there was an error",
     },
   });
