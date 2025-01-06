@@ -10,6 +10,7 @@ services:
     command: ["${COMMAND:-dev}"]
     ports:
       - "${PORT}:${PORT_CONTAINER}"
+      - "${DEBUG_PORT}:${DEBUG_PORT_CONTAINER}"
     volumes:
       - ./.env:/app/.env
       - ./src:/app/src

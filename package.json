@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --watch src/server.ts",
+    "dev": "tsx --env-file .env --watch --inspect=0.0.0.0:${DEBUG_PORT_CONTAINER} --nolazy src/server.ts",
+    "start:debug": "",
     "build": "./bin/build.sh",
     "start": "./bin/start.sh",
     "knex": "knex",
