@@ -10,6 +10,10 @@ const ENV = {
   DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
   MODE: process.env.MODE,
   PORT: process.env.PORT,
+  HTTPS_PORT: process.env.HTTPS_PORT,
+  KEY_SSL_PATH: process.env.KEY_SSL_PATH,
+  CERT_SSL_PATH: process.env.CERT_SSL_PATH,
+  HTTPS_REDIRECT: process.env.HTTPS_REDIRECT == "true",
 };
 
 export default ENV;
