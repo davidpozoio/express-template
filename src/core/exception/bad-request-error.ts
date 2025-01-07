@@ -1,4 +1,4 @@
-import HttpError from "./http-error.exception";
+import HttpError from "./http-error";
 
 export default class BadRequestException extends HttpError {
   message: string = "bad request";

@@ -1,4 +1,4 @@
-import BadRequestException from "./bad-request.exception";
+import BadRequestException from "./bad-request-error";
 
 export default class ValidationErrorException extends BadRequestException {
   message: string = "incorrect values provided";

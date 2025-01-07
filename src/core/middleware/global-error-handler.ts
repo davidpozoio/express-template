@@ -1,6 +1,6 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
-import HttpError from "../exception/http-error.exception";
-import ValidationErrorException from "core/exception/validation.exception";
+import HttpError from "../exception/http-error";
+import ValidationErrorException from "../exception/validation-error";
 
 const globalErrorHandler = async (
   error: ErrorRequestHandler,
