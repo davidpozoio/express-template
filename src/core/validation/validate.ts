@@ -1,6 +1,6 @@
 import { ZodObject } from "zod";
-import asyncErrorController from "core/utils/async-error-controller";
-import ValidationErrorException from "core/exception/validation-error";
+import asyncErrorController from "../utils/async-error-controller";
+import ValidationErrorException from "../exception/validation-error";
 
 interface ValidateRequest<T extends {}> {
   type: "params" | "body" | "query";

@@ -4,7 +4,7 @@ import app from "./app";
 import sequelize from "./core/config/sequelize.config";
 import ENV from "./core/environment/environment";
 import { readFileSync } from "fs";
-import redirectHttpToHttps from "core/middleware/redirect-http-to-https";
+import redirectHttpToHttps from "./core/middleware/redirect-http-to-https";
 
 sequelize
   .authenticate({ retry: { max: 10, timeout: 5000 } })

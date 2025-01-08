@@ -1,4 +1,4 @@
-import asyncErrorController from "core/utils/async-error-controller";
+import asyncErrorController from "../utils/async-error-controller";
 
 const redirectHttpToHttps = asyncErrorController(async (req, res, next) => {
   if (req.secure) {
