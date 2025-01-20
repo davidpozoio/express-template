@@ -1,0 +1,3 @@
+application:
+  test:
+    enable-default-database: true

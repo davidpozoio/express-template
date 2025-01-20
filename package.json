@@ -12,7 +12,11 @@
     "test:watch": "jest --watch",
     "docker:dev": "./bin/docker-dev.sh",
     "docker:prod": "./bin/docker-prod.sh",
+    "docker:test": "./bin/test.sh",
     "docker:knex": "./bin/knex.sh",
+    "docker:clear": "./bin/clear-containers.sh",
+    "migrate": "./bin/migrate-knex.sh",
+    "biome": "biome",
     "prepare": "husky"
   },
   "keywords": [],
@@ -21,6 +25,7 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "js-yaml": "^4.1.0",
     "knex": "^3.1.0",
     "pg": "^8.13.1",
     "pg-hstore": "^2.3.4",
@@ -35,6 +40,7 @@
     "@jest/globals": "^29.7.0",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
+    "@types/js-yaml": "^4.0.9",
     "@types/supertest": "^6.0.2",
     "esbuild": "0.24.2",
     "husky": "^9.1.7",

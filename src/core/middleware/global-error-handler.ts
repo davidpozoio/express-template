@@ -1,4 +1,9 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
+import type {
+  ErrorRequestHandler,
+  NextFunction,
+  Request,
+  Response,
+} from "express";
 import HttpError from "../exception/http-error";
 import ValidationErrorException from "../exception/validation-error";
 

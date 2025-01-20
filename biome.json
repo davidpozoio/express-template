@@ -3,7 +3,15 @@
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["dist/*", "src/db/*", "node_modules/*"]
+    "ignore": [
+      "dist/*",
+      "src/db/*",
+      "node_modules/*",
+      ".vscode/*",
+      ".husky/*",
+      "bin/*",
+      "public/*"
+    ]
   },
   "formatter": {
     "enabled": true,

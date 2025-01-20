@@ -1,4 +1,4 @@
-import { ZodObject } from "zod";
+import type { ZodObject } from "zod";
 import asyncErrorController from "../utils/async-error-controller";
 import ValidationErrorException from "../exception/validation-error";
 
@@ -9,6 +9,7 @@ interface ValidateRequest<T extends {}> {
 
 const validate = <T extends {}>({ type, schema }: ValidateRequest<T>) => {
   return asyncErrorController(async (req, res, next) => {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     const typeSchema: { [key in ValidateRequest<T>["type"]]: () => any } = {
       body: () => schema.parse(req.body),
       params: () => schema.parse(req.params),
@@ -17,6 +18,7 @@ const validate = <T extends {}>({ type, schema }: ValidateRequest<T>) => {
 
     try {
       const parsedSchema = typeSchema[type]();
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
       (res as any)[type] = { ...parsedSchema };
       next();
     } catch (error) {

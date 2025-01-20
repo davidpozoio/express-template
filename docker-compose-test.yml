@@ -1,0 +1,10 @@
+services:
+  testdatabase:
+    image: postgres:17.2-alpine3.21
+    env_file: ./.env
+    environment:
+      - "POSTGRES_USER=${TEST_DATABASE_USER}"
+      - "POSTGRES_PASSWORD=${TEST_DATABASE_PASSWORD}"
+      - "POSTGRES_DB=${TEST_DATABASE_NAME}"
+    networks:
+      - intern-network

@@ -1,13 +1,13 @@
-import https, { ServerOptions } from "https";
+import https, { type ServerOptions } from "node:https";
 import express from "express";
 import app from "./app";
-import sequelize from "./core/config/sequelize.config";
 import ENV from "./core/environment/environment";
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 import redirectHttpToHttps from "./core/middleware/redirect-http-to-https";
+import { databaseConnection } from "./db/dependencies";
 
-sequelize
-  .authenticate({ retry: { max: 10, timeout: 5000 } })
+databaseConnection
+  .authenticate({ databaseMode: "normal", maxRetries: 10, timeout: 5000 })
   .catch(() => {
     console.log("trying to connect to the database...");
   })

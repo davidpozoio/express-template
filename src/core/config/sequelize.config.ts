@@ -2,10 +2,10 @@ import { Sequelize } from "sequelize";
 import ENV from "../environment/environment";
 
 const sequelize = new Sequelize({
-  database: ENV.DATABASE_NAME,
-  host: ENV.DATABASE_HOST,
-  username: ENV.DATABASE_USER,
-  password: ENV.DATABASE_PASSWORD,
+  database: ENV.DATABASE().NAME,
+  host: ENV.DATABASE().HOST,
+  username: ENV.DATABASE().USER,
+  password: ENV.DATABASE().PASSWORD,
   dialect: "postgres",
   pool: {
     max: 10,

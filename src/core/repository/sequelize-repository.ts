@@ -1,6 +1,10 @@
-import { Model, ModelStatic } from "sequelize";
-import { CountAndRows, QueryOptions, UpdateOptions } from "../types/repository";
-import { GlobalRepository } from "./global-repository";
+import type { Model, ModelStatic } from "sequelize";
+import type {
+  CountAndRows,
+  QueryOptions,
+  UpdateOptions,
+} from "../types/repository";
+import type { GlobalRepository } from "./global-repository";
 
 export default class SequelizeRepository<T extends {}>
   implements GlobalRepository<T>
