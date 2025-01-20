@@ -10,7 +10,8 @@
       ".vscode/*",
       ".husky/*",
       "bin/*",
-      "public/*"
+      "public/*",
+      "package.json"
     ]
   },
   "formatter": {
