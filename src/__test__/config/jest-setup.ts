@@ -11,6 +11,7 @@ beforeAll(async () => {
       maxRetries: 10,
       timeout: 5000,
       databaseMode: "test",
+      logging: false,
     });
 }, 1000 * 2);
 

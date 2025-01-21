@@ -1,5 +1,5 @@
 import DatabaseConnectionRepository, {
-  TestConnectionOptions,
+  DatabaseConnectionOptions,
 } from "@app/core/repository/database-connection.repository";
 
 export default class DatabaseConnection {
@@ -7,11 +7,14 @@ export default class DatabaseConnection {
     private readonly databaseConnection: DatabaseConnectionRepository,
   ) {}
 
-  async authenticate(options: TestConnectionOptions) {
+  async authenticate(options: DatabaseConnectionOptions) {
     return this.databaseConnection.testConnection(options);
   }
 
   close() {
     return this.databaseConnection.close();
+  }
+  query(query: string) {
+    return this.databaseConnection.query(query);
   }
 }

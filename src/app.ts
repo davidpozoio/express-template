@@ -1,6 +1,7 @@
 import path from "node:path";
 import express from "express";
 import globalErrorHandler from "./core/middleware/global-error-handler";
+import applicationConfig from "./core/environment/application.env";
 
 const app = express();
 
@@ -12,11 +13,13 @@ app.use("/health", async (req, res) => {
   });
 });
 
-app.get("*", (req, res) => {
-  res
-    .status(200)
-    .sendFile(path.join(__dirname, "../", "public/frontend/index.html"));
-});
+if (applicationConfig.spaMode) {
+  app.get("*", (req, res) => {
+    res
+      .status(200)
+      .sendFile(path.join(__dirname, "../", "public/frontend/index.html"));
+  });
+}
 
 app.use(globalErrorHandler);
 
