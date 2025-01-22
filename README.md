@@ -113,4 +113,4 @@ This project uses jest for testing
 
 ## COMMITS
 
-This project uses conventional commits, actually has a hook done in `husky` to validate it. So try to follow the convetion before doing a commit.
+This project uses conventional commits, actually has a hook done in `husky` to validate it. So try to follow the convention before doing a commit.
