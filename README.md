@@ -36,7 +36,7 @@ npm run docker:test --watchAll
 
 ## CLEAN DOCKER CONTAINERS AND OTHER SERVICES
 
-This command remove all the running containers, networks, etc. `equivalent to use docker compose up`.
+This command remove all the running containers, networks, etc. `equivalent to use docker compose down`.
 
 ```bash
 npm run docker:clear
@@ -44,7 +44,7 @@ npm run docker:clear
 
 # APPLICATION CONFIGURATION
 
-you can config the application using the application.config.yml
+You can config the application using the application.config.yml
 
 ```yml
 application:
@@ -53,12 +53,23 @@ application:
     enable-default-database: true
 ```
 
-these are the default values:
+These are the default values:
 `spa-mode` redirects the default route of the server always to the same index in `public/frontend/index.html`.
 
 `enable-default-database`: this command enables the default test database, you can use this database to do your tests
 
-the other configurations are handled using the `.env` file, this file is recommended to include to .gitignore once you start to create your project.
+The other configurations are handled using the `.env` file, this file is recommended to include to .gitignore once you start to create your project.
+
+# ENV
+
+In the last section of the `.env` file you can find CERTS SSL variables, here you have the variable `HTTPS_REDIRECT`, this boolean value enables https default redirection from `http` protocol to `https` protocol, useful for production domains configuration.
+
+```bash
+######### CERTS SSL ###################
+KEY_SSL_PATH=./certs/key.pem
+CERT_SSL_PATH=./certs/cert.pem
+HTTPS_REDIRECT=false
+```
 
 # MIGRATIONS
 
@@ -92,7 +103,7 @@ npm run biome -- "ANY BIOME COMMAND"
 
 # NOTES
 
-If you can init the project without docker you can, but you need to add other credentials for the database .env file.
+you can init the project without docker, but you need to add other credentials for the database .env file.
 
 The default type of database used is postgresql
 
