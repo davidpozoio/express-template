@@ -5,6 +5,7 @@ import ENV from "./core/environment/environment";
 import { readFileSync } from "node:fs";
 import redirectHttpToHttps from "./core/middleware/redirect-http-to-https";
 import { databaseConnection } from "./db/dependencies";
+import { DATABASE_MODE } from "./core/environment/database.env";
 
 databaseConnection
   .authenticate({ databaseMode: "normal", maxRetries: 10, timeout: 5000 })
@@ -12,7 +13,7 @@ databaseConnection
     console.log("trying to connect to the database...");
   })
   .then(() => {
-    console.log("database connected!");
+    console.log("database connected!", `Database mode: ${DATABASE_MODE}`);
 
     /// cert options
     const options: ServerOptions = {
