@@ -1,5 +1,8 @@
 import type { DatabaseMode } from "../types/environment";
 
+export const DATABASE_MODE =
+  (process.env.DATABASE_MODE as DatabaseMode) || "normal";
+
 const DATABASE_ENV = {
   /**
    *
