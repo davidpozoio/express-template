@@ -6,6 +6,7 @@ import type {
 } from "express";
 import HttpError from "../exception/http-error";
 import ValidationErrorException from "../exception/validation-error";
+import ENV from "../environment/environment";
 
 const globalErrorHandler = async (
   error: ErrorRequestHandler,
@@ -34,9 +35,18 @@ const globalErrorHandler = async (
     return;
   }
 
+  if (ENV.MODE === "dev") {
+    res.status(500).json({
+      error: {
+        ...error,
+        message: "there was an error",
+      },
+    });
+    return;
+  }
+
   res.status(500).json({
     error: {
-      ...error,
       message: "there was an error",
     },
   });
