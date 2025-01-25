@@ -6,6 +6,7 @@ import ENV from "./core/environment/environment";
 
 const app = express();
 
+app.use(express.json());
 app.use("/", express.static("public/dist"));
 
 app.use(`${ENV.API_PREFIX}/health`, async (req, res) => {
