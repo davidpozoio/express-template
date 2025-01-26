@@ -1,9 +1,15 @@
 # FIRST STEPS
 
-install the dependencies, use any package installer (npm, pnpm, yarn, etc)
+Install the dependencies, use any package installer (npm, pnpm, yarn, etc)
 
 ```bash
 npm install
+```
+
+To enable husky hooks for validation conventional commits and lint, execute the next command.
+
+```bash
+npm run prepare
 ```
 
 # INIT PROJECT IN DOCKER
@@ -31,7 +37,7 @@ npm run docker:test
 ### For watch mode
 
 ```bash
-npm run docker:test --watchAll
+npm run docker:test -- --watchAll
 ```
 
 ## CLEAN DOCKER CONTAINERS AND OTHER SERVICES
