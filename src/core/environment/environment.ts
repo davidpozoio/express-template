@@ -10,6 +10,7 @@ const ENV = {
   CERT_SSL_PATH: process.env.CERT_SSL_PATH,
   HTTPS_REDIRECT: process.env.HTTPS_REDIRECT === "true",
   API_PREFIX: process.env.API_PREFIX,
+  RATE_LIMIT_MAX: Number(process.env.RATE_LIMIT_MAX),
 };
 
 export default ENV;

@@ -2,3 +2,5 @@ application:
   spa-mode: true
   test:
     enable-default-database: true
+  database:
+    enable-test-connection: true

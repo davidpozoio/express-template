@@ -3,10 +3,12 @@ import express from "express";
 import globalErrorHandler from "./core/middleware/global-error-handler";
 import applicationConfig from "./core/environment/application.env";
 import ENV from "./core/environment/environment";
+import globalRateLimit from "./core/middleware/global-rate-limit";
 
 const app = express();
 
 app.use(express.json());
+app.use(globalRateLimit);
 app.use("/", express.static("public/dist"));
 
 app.use(`${ENV.API_PREFIX}/health`, async (req, res) => {
