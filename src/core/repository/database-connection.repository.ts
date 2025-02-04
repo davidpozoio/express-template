@@ -1,3 +1,4 @@
+import type { DatabaseQueryOptions } from "../types/database";
 import type { DatabaseMode } from "../types/environment";
 
 export interface TestConnectionOptions {
@@ -17,5 +18,5 @@ export interface DatabaseConnectionOptions
 export default interface DatabaseConnectionRepository {
   testConnection(options: DatabaseConnectionOptions): Promise<void>;
   close(): Promise<void>;
-  query(query: string): Promise<void>;
+  query<T>(query: string, options?: DatabaseQueryOptions<T>): Promise<void>;
 }

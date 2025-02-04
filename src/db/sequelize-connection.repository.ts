@@ -2,6 +2,8 @@ import SequelizeMother from "@app/core/config/sequelize-mother";
 import DatabaseConnectionRepository, {
   DatabaseConnectionOptions,
 } from "@app/core/repository/database-connection.repository";
+import { DatabaseQueryOptions } from "@app/core/types/database";
+import logger from "@app/core/utils/logger";
 import { Sequelize } from "sequelize";
 
 export default class SequelizeConnectionRepository
@@ -37,7 +39,16 @@ export default class SequelizeConnectionRepository
     await this.sequelize?.close();
   }
 
-  async query(query: string): Promise<void> {
-    await this.sequelize?.query(query);
+  async query<T>(
+    query: string,
+    options: DatabaseQueryOptions<T>,
+  ): Promise<void> {
+    await this.sequelize
+      ?.query(query, {
+        replacements: { ...options?.replacements },
+      })
+      ?.catch((err) => {
+        logger.error(err);
+      });
   }
 }

@@ -1,6 +1,7 @@
 import DatabaseConnectionRepository, {
   DatabaseConnectionOptions,
 } from "@app/core/repository/database-connection.repository";
+import { DatabaseQueryOptions } from "@app/core/types/database";
 
 export default class DatabaseConnection {
   constructor(
@@ -14,7 +15,7 @@ export default class DatabaseConnection {
   close() {
     return this.databaseConnection.close();
   }
-  query(query: string) {
-    return this.databaseConnection.query(query);
+  query<T>(query: string, options?: DatabaseQueryOptions<T>) {
+    return this.databaseConnection.query(query, options);
   }
 }
