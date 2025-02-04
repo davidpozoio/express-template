@@ -1,6 +1,7 @@
 import type { Model, ModelStatic } from "sequelize";
 import type {
   CountAndRows,
+  OptionalId,
   QueryOptions,
   UpdateOptions,
 } from "../types/repository";
@@ -58,5 +59,11 @@ export default class SequelizeRepository<T extends {}>
     return this.findOne({
       where: { ...queryOptions?.where, id } as unknown as Partial<T>,
     });
+  }
+
+  async save(object: OptionalId<T>): Promise<T> {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    const createdObject = await this.baseModel.create(object as any);
+    return createdObject.get();
   }
 }
