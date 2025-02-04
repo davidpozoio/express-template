@@ -1,5 +1,5 @@
 import HttpError from "./http-error";
 
-export default class MethodNotImplemented extends HttpError {
+export default class MethodNotImplementedException extends HttpError {
   message = "method not implemented";
 }
