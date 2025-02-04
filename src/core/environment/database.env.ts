@@ -15,7 +15,7 @@ const DATABASE_ENV = {
     const databaseScheme = z.object({
       USER: z.string().max(200),
       NAME: z.string(),
-      HOST: z.string().url(),
+      HOST: z.string(),
       PORT: z.coerce.number().max(10000),
       PASSWORD: z.string().max(1000),
     });
