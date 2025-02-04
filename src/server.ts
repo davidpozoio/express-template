@@ -6,14 +6,15 @@ import { readFileSync } from "node:fs";
 import redirectHttpToHttps from "./core/middleware/redirect-http-to-https";
 import { databaseConnection } from "./db/dependencies";
 import { DATABASE_MODE } from "./core/environment/database.env";
+import logger from "./core/utils/logger";
 
 databaseConnection
   .authenticate({ databaseMode: "normal", maxRetries: 10, timeout: 5000 })
   .catch(() => {
-    console.log("trying to connect to the database...");
+    logger.info("trying to connect to the database...");
   })
   .then(() => {
-    console.log("database connected!", `Database mode: ${DATABASE_MODE}`);
+    logger.info("database connected!", `Database mode: ${DATABASE_MODE}`);
 
     /// cert options
     const options: ServerOptions = {
@@ -24,19 +25,19 @@ databaseConnection
     const server = https.createServer(options, app);
 
     server.listen(ENV.HTTPS_PORT, () => {
-      console.log(`https server has started in port ${ENV.HTTPS_PORT}`);
+      logger.info(`https server has started in port ${ENV.HTTPS_PORT}`);
     });
 
     if (ENV.HTTPS_REDIRECT) {
       const httpServer = express();
       httpServer.get("*", redirectHttpToHttps);
       httpServer.listen(ENV.PORT, () => {
-        console.log(`http server has started in port ${ENV.PORT}`);
+        logger.info(`the server has started in ${ENV.PORT}`);
       });
       return;
     }
 
     app.listen(ENV.PORT, () => {
-      console.log(`the server has started in ${ENV.PORT}`);
+      logger.info(`the server has started in ${ENV.PORT}`);
     });
   });

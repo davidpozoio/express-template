@@ -1,16 +1,20 @@
 import DATABASE_ENV from "./database.env";
-import type { EnvironmentMode } from "../types/environment";
+import z from "zod";
+
+const envScheme = z.object({
+  MODE: z.union([z.literal("dev"), z.literal("prod")]).default("dev"),
+  PORT: z.coerce.number().max(10000),
+  HTTPS_PORT: z.coerce.number().max(10000),
+  KEY_SSL_PATH: z.string(),
+  CERT_SSL_PATH: z.string(),
+  HTTPS_REDIRECT: z.coerce.boolean().default(false),
+  API_PREFIX: z.string(),
+  RATE_LIMIT_MAX: z.coerce.number().max(200),
+});
 
 const ENV = {
   DATABASE: DATABASE_ENV.DATABASE,
-  MODE: process.env.MODE as EnvironmentMode,
-  PORT: process.env.PORT,
-  HTTPS_PORT: process.env.HTTPS_PORT,
-  KEY_SSL_PATH: process.env.KEY_SSL_PATH,
-  CERT_SSL_PATH: process.env.CERT_SSL_PATH,
-  HTTPS_REDIRECT: process.env.HTTPS_REDIRECT === "true",
-  API_PREFIX: process.env.API_PREFIX,
-  RATE_LIMIT_MAX: Number(process.env.RATE_LIMIT_MAX),
+  ...envScheme.parse(process.env),
 };
 
 export default ENV;

@@ -7,6 +7,7 @@ import type {
 import HttpError from "../exception/http-error";
 import ValidationErrorException from "../exception/validation-error";
 import ENV from "../environment/environment";
+import logger from "../utils/logger";
 
 const globalErrorHandler = async (
   error: ErrorRequestHandler,
@@ -34,6 +35,8 @@ const globalErrorHandler = async (
     });
     return;
   }
+
+  logger.error(error);
 
   if (ENV.MODE === "dev") {
     res.status(500).json({

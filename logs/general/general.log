@@ -1,0 +1,10 @@
+[32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:10:42.020Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:10:42.026Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-04T19:11:11.499Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-04T19:11:11.500Z"}
+[32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:11:11.542Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:11:11.542Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-04T19:12:41.154Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-04T19:12:41.155Z"}
+[32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:12:41.209Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:12:41.209Z"}
