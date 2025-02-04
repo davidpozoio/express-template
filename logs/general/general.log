@@ -8,3 +8,15 @@
 [32minfo[39m: database connected! {"timestamp":"2025-02-04T19:12:41.155Z"}
 [32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:12:41.209Z"}
 [32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:12:41.209Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-04T19:21:44.502Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-04T19:21:44.508Z"}
+[32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:21:44.546Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:21:44.546Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-04T19:23:30.441Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-04T19:23:30.442Z"}
+[32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:23:30.484Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:23:30.484Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-04T19:23:42.824Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-04T19:23:42.825Z"}
+[32minfo[39m: https server has started in port 8001 {"timestamp":"2025-02-04T19:23:42.865Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-04T19:23:42.866Z"}
