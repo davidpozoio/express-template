@@ -1,5 +1,8 @@
 import z from "zod";
 import type { DatabaseMode } from "../types/environment";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const DATABASE_MODE =
   (process.env.DATABASE_MODE as DatabaseMode) || "normal";

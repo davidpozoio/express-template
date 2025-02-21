@@ -12,12 +12,11 @@
     "test:watch": "jest --watch",
     "docker:dev": "./bin/docker-dev.sh",
     "docker:prod": "./bin/docker-prod.sh",
-    "docker:test": "./bin/test.sh",
     "docker:knex": "./bin/knex.sh",
     "docker:clear": "./bin/clear-containers.sh",
     "migrate": "./bin/migrate-knex.sh",
     "biome": "biome",
-    "prepare": "npx husky init && husky"
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",

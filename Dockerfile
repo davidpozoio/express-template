@@ -5,8 +5,8 @@ RUN wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64
     chmod +x /usr/bin/yq
 COPY ./bin /app/bin
 RUN mkdir src 
-RUN npm install pnpm -g
+RUN npm install bun -g
 COPY package.json .
-RUN pnpm install
+RUN bun install
 ENTRYPOINT [ "npm", "run" ]
 CMD ["dev"]

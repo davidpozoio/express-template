@@ -1,1 +1,1 @@
-npm run biome lint
+bun test

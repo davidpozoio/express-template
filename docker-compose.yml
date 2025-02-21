@@ -9,8 +9,7 @@ services:
       dockerfile: Dockerfile
     command: ["${COMMAND:-dev}"]
     ports:
-      - "${PORT}:${PORT_CONTAINER}"
-      - ${HTTPS_PORT}:${HTTPS_PORT_CONTAINER}
+      - "${PORT}:${PORT}"
       - "${DEBUG_PORT}:${DEBUG_PORT_CONTAINER}"
     volumes:
       - ./.env:/app/.env
