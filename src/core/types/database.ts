@@ -13,7 +13,7 @@ export interface DatabaseGlobalConfig {
 }
 
 export interface DatabaseConfig {
-  client: "postgresql";
+  client: "postgresql" | "mysql";
   user: string;
   name: string;
   host: string;

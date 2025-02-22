@@ -1,5 +1,7 @@
-import DATABASE_ENV from "./database.env";
+import dotenv from "dotenv";
 import z from "zod";
+
+dotenv.config();
 
 export const envScheme = z.object({
   MODE: z
@@ -11,9 +13,6 @@ export const envScheme = z.object({
   RATE_LIMIT_MAX: z.coerce.number().max(200),
 });
 
-const ENV = {
-  DATABASE: DATABASE_ENV,
-  ...envScheme.parse(process.env),
-};
+const ENV = envScheme.parse(process.env);
 
 export default ENV;

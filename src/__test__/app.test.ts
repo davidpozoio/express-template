@@ -1,12 +1,12 @@
 import { describe, test, expect } from "vitest";
-
-import request from "supertest";
-import app from "../app";
 import ENV from "@app/core/environment/environment";
+import appTest from "./config/app-test";
 
 describe("App", () => {
   test("health", async () => {
-    const res = await request(app).get(`${ENV.API_PREFIX}/health`);
+    const app = await appTest({ overrideDatabase: { host: "new_database" } });
+
+    const res = await app.get(`${ENV.API_PREFIX}/health`);
 
     expect(res.statusCode).toBe(200);
   });

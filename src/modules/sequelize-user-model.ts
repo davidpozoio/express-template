@@ -1,8 +1,8 @@
-import sequelize from "@app/core/config/sequelize.config";
 import { DataTypes, type Model } from "sequelize";
 import type User from "./user.entity";
+import sequelize from "@app/core/config/sequelize.config";
 
-const UserSequelize = sequelize.define<Model<User>>(
+const UserSequelize = sequelize().define<Model<User>>(
   "users",
   {
     id: {
