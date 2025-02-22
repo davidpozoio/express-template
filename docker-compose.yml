@@ -7,6 +7,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        target: development
+
     command: ["${COMMAND:-dev}"]
     ports:
       - "${PORT}:${PORT}"
