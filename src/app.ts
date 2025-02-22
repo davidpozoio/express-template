@@ -1,7 +1,7 @@
 import path from "node:path";
 import express from "express";
 import globalErrorHandler from "./core/middleware/global-error-handler";
-import applicationConfig from "./core/environment/application.env";
+import applicationConfig from "./core/environment/application.config";
 import ENV from "./core/environment/environment";
 import globalRateLimit from "./core/middleware/global-rate-limit";
 

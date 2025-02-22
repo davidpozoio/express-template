@@ -1,4 +1,3 @@
-import SequelizeMother from "@app/core/config/sequelize-mother";
 import DatabaseConnectionRepository, {
   DatabaseConnectionOptions,
 } from "@app/core/repository/database-connection.repository";
@@ -23,11 +22,6 @@ export default class SequelizeConnectionRepository
       logging: false,
     },
   ): Promise<void> {
-    this.sequelize = SequelizeMother.create({
-      mode: options.databaseMode,
-      logging: options.logging,
-    });
-
     await this.sequelize?.authenticate({
       retry: { max: options.maxRetries, timeout: options.timeout },
     });

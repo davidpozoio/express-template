@@ -1,9 +1,9 @@
 FROM node:22-alpine3.19 AS base
 WORKDIR /app
 RUN apk add --no-cache wget
-COPY ./bin /app/bin
 RUN mkdir src 
 RUN npm install bun -g
+COPY ./bin /app/bin
 COPY package.json .
 
 FROM base AS development

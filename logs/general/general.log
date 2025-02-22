@@ -139,3 +139,69 @@
 [32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T01:20:34.224Z"}
 [32minfo[39m: database connected! {"timestamp":"2025-02-22T01:20:44.322Z"}
 [32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T01:20:44.325Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:13:39.389Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:13:39.389Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:13:39.392Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:14:23.320Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:14:23.321Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:14:23.324Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:14:27.689Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:14:27.690Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:14:27.692Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:18:18.340Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:18:18.343Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:18:18.345Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:19:29.302Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:19:29.303Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:19:29.305Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:20:26.790Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:20:26.791Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:20:26.794Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:22:49.152Z"}
+[32minfo[39m: database connected! {"timestamp":"2025-02-22T04:22:49.154Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:22:49.157Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:23:09.639Z"}
+[32minfo[39m: database connected!
+      Database mode: dev {"timestamp":"2025-02-22T04:23:09.640Z"}
+[32minfo[39m: the server has started in 8000 {"timestamp":"2025-02-22T04:23:09.642Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:23:28.050Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:23:28.051Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:23:28.053Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:24:12.057Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:24:12.058Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:24:12.060Z"}
+[32minfo[39m: trying to connect to the database... {"timestamp":"2025-02-22T04:24:22.420Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:24:22.421Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:24:22.423Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:29:00.778Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:29:00.786Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:31:28.434Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:31:28.436Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:31:37.811Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:31:37.814Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:31:41.806Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:31:41.808Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:44:03.230Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:44:03.236Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:45:12.178Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:45:12.180Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:45:17.687Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:45:17.689Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:46:41.311Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:46:41.313Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:47:26.868Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:47:26.871Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:53:28.772Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:53:28.775Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T04:53:43.495Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T04:53:43.498Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T06:10:04.594Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T06:10:04.601Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T06:10:07.629Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T06:10:07.636Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T06:14:28.421Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T06:14:28.424Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T06:15:58.188Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T06:15:58.197Z"}
+[32minfo[39m: Database connected! Database mode: dev {"timestamp":"2025-02-22T06:18:05.274Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-22T06:18:05.277Z"}

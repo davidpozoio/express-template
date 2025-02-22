@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "tsx --env-file .env --watch --inspect=0.0.0.0:${DEBUG_PORT_CONTAINER} --nolazy src/server.ts",
     "build": "./bin/build.sh",
+    "esbuild": "esbuild",
     "start": "./bin/start.sh",
     "knex": "knex",
     "test": "vitest",
@@ -38,6 +39,7 @@
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@jest/globals": "^29.7.0",
+    "@testcontainers/postgresql": "^10.18.0",
     "@types/express": "^5.0.0",
     "@types/express-rate-limit": "^6.0.2",
     "@types/js-yaml": "^4.0.9",
@@ -46,6 +48,7 @@
     "husky": "^9.1.7",
     "prettier": "3.4.2",
     "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vite-tsconfig-paths": "^5.1.4",

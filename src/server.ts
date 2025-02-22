@@ -2,8 +2,9 @@ import app from "./app";
 import ENV from "./core/environment/environment";
 
 import { databaseConnection } from "./db/dependencies";
-import { DATABASE_MODE } from "./core/environment/database.env";
+
 import logger from "./core/utils/logger";
+import databaseConfig from "./core/environment/database.config";
 
 databaseConnection
   .authenticate({ databaseMode: "normal", maxRetries: 10, timeout: 5000 })
@@ -11,9 +12,11 @@ databaseConnection
     logger.info("trying to connect to the database...");
   })
   .then(() => {
-    logger.info("database connected!", `Database mode: ${DATABASE_MODE}`);
+    logger.info(
+      `Database connected! Database mode: ${databaseConfig.config.use}`,
+    );
 
     app.listen(ENV.PORT, () => {
-      logger.info(`the server has started in ${ENV.PORT}`);
+      logger.info(`The server has started in ${ENV.PORT}`);
     });
   });

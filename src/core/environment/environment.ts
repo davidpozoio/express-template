@@ -1,7 +1,7 @@
 import DATABASE_ENV from "./database.env";
 import z from "zod";
 
-const envScheme = z.object({
+export const envScheme = z.object({
   MODE: z
     .union([z.literal("dev"), z.literal("prod"), z.literal("test")])
     .default("dev"),
@@ -12,7 +12,7 @@ const envScheme = z.object({
 });
 
 const ENV = {
-  DATABASE: DATABASE_ENV.DATABASE,
+  DATABASE: DATABASE_ENV,
   ...envScheme.parse(process.env),
 };
 
