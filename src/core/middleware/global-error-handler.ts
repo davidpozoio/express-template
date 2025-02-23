@@ -18,6 +18,7 @@ const globalErrorHandler = async (
   if (error instanceof HttpError) {
     res.status(error.statusCode).json({
       error: {
+        data: ENV.MODE === "dev" ? { ...error.errorObject } : undefined,
         message: error.message,
         code: error.code,
       },
