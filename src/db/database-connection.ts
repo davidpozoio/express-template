@@ -11,11 +11,4 @@ export default class DatabaseConnection {
   async authenticate(options: DatabaseConnectionOptions) {
     return this.databaseConnection.testConnection(options);
   }
-
-  close() {
-    return this.databaseConnection.close();
-  }
-  query<T>(query: string, options?: DatabaseQueryOptions<T>) {
-    return this.databaseConnection.query(query, options);
-  }
 }

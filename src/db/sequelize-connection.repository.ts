@@ -1,14 +1,14 @@
+import sequelize from "@app/core/config/sequelize.config";
+import databaseConfig from "@app/core/environment/database.config";
 import DatabaseConnectionRepository, {
   DatabaseConnectionOptions,
 } from "@app/core/repository/database-connection.repository";
-import { DatabaseQueryOptions } from "@app/core/types/database";
+import delay from "@app/core/utils/delay";
 import logger from "@app/core/utils/logger";
-import { Sequelize } from "sequelize";
 
 export default class SequelizeConnectionRepository
   implements DatabaseConnectionRepository
 {
-  sequelize: Sequelize | null = null;
   /**
    *
    * @param options options for configuration
@@ -18,31 +18,27 @@ export default class SequelizeConnectionRepository
     options: DatabaseConnectionOptions = {
       maxRetries: 10,
       timeout: 5000,
-      databaseMode: "normal",
+
       logging: false,
     },
   ): Promise<void> {
-    await this.sequelize?.authenticate({
-      retry: { max: options.maxRetries, timeout: options.timeout },
-    });
-  }
-  /**
-   * closes all the current connections
-   */
-  async close(): Promise<void> {
-    await this.sequelize?.close();
-  }
+    let tries = 0;
+    while (true) {
+      if (tries === options.maxRetries) {
+        logger.error("Error to connect to the database");
+        break;
+      }
 
-  async query<T>(
-    query: string,
-    options: DatabaseQueryOptions<T>,
-  ): Promise<void> {
-    await this.sequelize
-      ?.query(query, {
-        replacements: { ...options?.replacements },
-      })
-      ?.catch((err) => {
-        logger.error(err);
-      });
+      try {
+        logger.info(
+          `Trying to connect to "${databaseConfig.config.use}" database`,
+        );
+        await delay(options.timeout);
+        await sequelize().query("SELECT 1");
+        break;
+      } catch (error) {
+        tries++;
+      }
+    }
   }
 }

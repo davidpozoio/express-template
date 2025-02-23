@@ -21,11 +21,9 @@ app.get(`${ENV.API_PREFIX}/*`, (req, res) => {
   res.status(404).json({ message: "route not found" });
 });
 
-if (applicationConfig.spaMode) {
+if (applicationConfig.spa.enable) {
   app.get("/*", (req, res) => {
-    res
-      .status(200)
-      .sendFile(path.join(__dirname, "../", "public/frontend/index.html"));
+    res.status(200).sendFile(path.resolve(applicationConfig.spa.index));
   });
 }
 

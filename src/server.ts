@@ -4,19 +4,18 @@ import ENV from "./core/environment/environment";
 import { databaseConnection } from "./db/dependencies";
 
 import logger from "./core/utils/logger";
-import databaseConfig from "./core/environment/database.config";
+import applicationConfig from "./core/environment/application.config";
 
-databaseConnection
-  .authenticate({ databaseMode: "normal", maxRetries: 10, timeout: 5000 })
-  .catch(() => {
-    logger.info("trying to connect to the database...");
-  })
-  .then(() => {
-    logger.info(
-      `Database connected! Database mode: ${databaseConfig.config.use}`,
-    );
+async function main() {
+  if (applicationConfig.database.enableTryConnection) {
+    await databaseConnection.authenticate({ maxRetries: 2, timeout: 2000 });
+  } else {
+    logger.info("Try database connection disabled");
+  }
 
-    app.listen(ENV.PORT, () => {
-      logger.info(`The server has started in ${ENV.PORT}`);
-    });
+  app.listen(ENV.PORT, () => {
+    logger.info(`The server has started in ${ENV.PORT}`);
   });
+}
+
+main();
