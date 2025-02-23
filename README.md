@@ -1,6 +1,6 @@
 # FIRST STEPS
 
-Install the dependencies, use any package installer (npm, pnpm, yarn, etc)
+Install the dependencies, use any package installer (npm, pnpm, yarn, bun, etc)
 
 ```bash
 npm install
@@ -9,7 +9,7 @@ npm install
 To enable husky hooks for validation conventional commits and lint, execute the next command.
 
 ```bash
-npm run prepare
+npm run husky
 ```
 
 # INIT PROJECT IN DOCKER
