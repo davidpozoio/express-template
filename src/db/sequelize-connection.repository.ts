@@ -35,6 +35,7 @@ export default class SequelizeConnectionRepository
         );
         await delay(options.timeout);
         await sequelize().query("SELECT 1");
+        logger.info("Database connected!");
         break;
       } catch (error) {
         tries++;
