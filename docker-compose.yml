@@ -19,6 +19,7 @@ services:
       - ./dist:/app/dist
       - ./public:/app/public
       - ./bin:/app/bin
+      - ./config:/app/config
       - ./:/app
     env_file:
       - ./.env

@@ -18,6 +18,8 @@ const loadKnexConfig = (): { [key: string]: Knex.Config } => {
       },
       migrations: {
         directory: path.resolve("src", "db", "migrations"),
+        loadExtensions: [".ts"],
+        extension: "ts",
       },
     };
   }
