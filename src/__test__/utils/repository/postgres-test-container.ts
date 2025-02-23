@@ -19,7 +19,7 @@ export default class PostgresTestContainer implements TestDatabaseContainer {
       host: this.startedContainer?.getHost() || DATABASE_ENV().HOST,
       name: this.startedContainer?.getDatabase() || DATABASE_ENV().NAME,
       password: this.startedContainer?.getPassword() || DATABASE_ENV().PASSWORD,
-      port: this.startedContainer?.getPort() || DATABASE_ENV().PORT,
+      port: this.startedContainer?.getMappedPort(5432) || DATABASE_ENV().PORT,
       user: this.startedContainer?.getUsername() || DATABASE_ENV().USER,
     };
   }

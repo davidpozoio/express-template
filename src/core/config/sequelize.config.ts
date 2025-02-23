@@ -12,6 +12,7 @@ class SequelizeConfig {
         host: DATABASE_ENV().HOST,
         username: DATABASE_ENV().USER,
         password: DATABASE_ENV().PASSWORD,
+        port: DATABASE_ENV().PORT,
         dialect: "postgres",
         pool: {
           max: 10,
