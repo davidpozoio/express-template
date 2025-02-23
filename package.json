@@ -18,7 +18,7 @@
     "docker:clear": "./bin/clear-containers.sh",
     "migrate": "./bin/migrate-knex.sh",
     "biome": "biome",
-    "husky": "npx husky install"
+    "husky": "npx husky init"
   },
   "keywords": [],
   "author": "",
