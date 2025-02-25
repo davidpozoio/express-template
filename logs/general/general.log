@@ -308,3 +308,50 @@
 [32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T04:49:04.004Z"}
 [32minfo[39m: Database connected! {"timestamp":"2025-02-25T04:49:06.184Z"}
 [32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T04:49:06.186Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T04:53:29.667Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T04:53:32.795Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T04:53:34.841Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T04:53:34.844Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T04:55:30.407Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T04:55:32.498Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T04:55:34.549Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T04:55:34.551Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T04:55:37.056Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T04:55:39.165Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T04:55:39.167Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T05:15:45.701Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T05:15:47.888Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T05:15:47.891Z"}
+[32minfo[39m: 
+> express-sequelize-template@1.0.0 prisma
+> prisma db push
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "test", schema "public" at "localhost:32794"
+
+🚀  Your database is now in sync with your Prisma schema. Done in 134ms
+
+Running generate... (Use --skip-generate to skip the generators)
+[2K[1A[2K[GRunning generate... - Prisma Client
+[2K[1A[2K[GEACCES: permission denied, open '/home/becquer/Documents/node/express-sequelize-
+template/node_modules/.prisma/client/schema.prisma'
+ {"timestamp":"2025-02-25T05:34:01.269Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T05:38:47.800Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T05:38:49.968Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T05:38:49.971Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T05:39:01.415Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T05:39:03.522Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T05:39:03.533Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T05:56:46.003Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T05:56:48.139Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T05:56:48.141Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T06:04:10.608Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T06:04:12.748Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T06:04:12.750Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T06:04:49.523Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T06:04:51.634Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T06:04:51.637Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-25T06:04:58.979Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-25T06:05:01.089Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-25T06:05:01.091Z"}

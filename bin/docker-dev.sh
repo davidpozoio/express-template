@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo docker compose $@ --build-arg target=development
+echo docker compose $@ 
 COMMAND=dev docker compose $@

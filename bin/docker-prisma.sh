@@ -2,4 +2,4 @@
 
 COMMAND="npm run prisma -- $@"
 
-docker compose run --entrypoint sh backend -c "$COMMAND"
+docker compose run --rm --entrypoint sh backend -c "$COMMAND"
