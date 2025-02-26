@@ -7,13 +7,13 @@ COPY ./bin /app/bin
 COPY package.json .
 
 FROM base AS development
-RUN bun install
+RUN bun install --ignore-scripts
 ENTRYPOINT [ "npm", "run" ]
 CMD ["dev"]
 
 FROM base AS production
 WORKDIR /app
 RUN npm install esbuild -g
-RUN bun install --production
+RUN bun install --production --ignore-scripts
 ENTRYPOINT [ "npm", "run" ]
 CMD ["start"]
