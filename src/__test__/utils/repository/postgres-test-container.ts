@@ -21,7 +21,7 @@ export default class PostgresTestContainer implements TestDatabaseContainer {
       password: this.startedContainer?.getPassword() || DATABASE_ENV().PASSWORD,
       port: this.startedContainer?.getMappedPort(5432) || DATABASE_ENV().PORT,
       user: this.startedContainer?.getUsername() || DATABASE_ENV().USER,
-      url: `postgresql://${this.startedContainer?.getUsername() || DATABASE_ENV().USER}:${this.startedContainer?.getPassword() || DATABASE_ENV().PASSWORD}@${this.startedContainer?.getHost() || DATABASE_ENV().HOST}:${this.startedContainer?.getMappedPort(5432) || DATABASE_ENV().PORT}/${this.startedContainer?.getDatabase() || DATABASE_ENV().NAME}?schema=public`,
+      url: `postgresql://${this.startedContainer?.getUsername() || DATABASE_ENV().USER}:${this.startedContainer?.getPassword() || DATABASE_ENV().PASSWORD}@${this.startedContainer?.getHost() || DATABASE_ENV().HOST}:${this.startedContainer?.getMappedPort(5432) || DATABASE_ENV().PORT}/${this.startedContainer?.getDatabase() || DATABASE_ENV().NAME}`,
     };
   }
 

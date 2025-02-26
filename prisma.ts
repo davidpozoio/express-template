@@ -3,9 +3,18 @@ import { execa } from "execa";
 
 async function loadPrismaCLI(params: string[]) {
   try {
-    const response = await execa("npx", ["prisma", ...params], {
+    let url: string | undefined;
+
+    const currentParams = params.filter((param) => {
+      if (param.startsWith("--url=")) {
+        url = param.split("=")[1];
+      }
+      return !param.startsWith("--url=");
+    });
+
+    const response = await execa("npx", ["prisma", ...currentParams], {
       env: {
-        DATABASE_URL: DATABASE_ENV().URL,
+        DATABASE_URL: url || DATABASE_ENV().URL,
       },
     });
 

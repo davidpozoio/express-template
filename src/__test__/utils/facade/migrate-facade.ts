@@ -7,15 +7,14 @@ interface MigrationOptions {
 export default class MigrateFacade {
   private constructor() {}
   static async migrate({ overrideUrl }: MigrationOptions) {
-    const { stdout } = await execa(
-      "npm",
-      ["run", "prisma", "--", "db", "push"],
-      {
-        env: {
-          DATABASE_URL: overrideUrl,
-        },
-      },
-    );
+    const { stdout } = await execa("npm", [
+      "run",
+      "prisma",
+      "--",
+      "db",
+      "push",
+      `--url=${overrideUrl}`,
+    ]);
 
     return stdout;
   }
