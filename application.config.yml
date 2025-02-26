@@ -1,6 +1,6 @@
 application:
   spa:
     enable: true
-    index: "public/src/frontend/index.html"
+    index: "public/frontend/index.html"
   database:
     enable-try-connection: true
