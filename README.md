@@ -12,9 +12,39 @@ To enable husky hooks for validation conventional commits and lint, execute the 
 npm run husky
 ```
 
-# INIT PROJECT IN DOCKER
+# INIT PROJECT
+
+## START PROJECT IN DEV MODE
+
+```bash
+npm run dev
+```
+
+## START PROJECT IN PRODUCTION
+
+```bash
+npm run start
+```
+
+## BUILD PROJECT
+
+Generates the build of your application
+.
+
+```bash
+npm run build
+```
+
+## START TESTS
+
+```bash
+npm run test
+```
+
+# DOCKER
 
 if you're using a system based in linux you probably need to use `sudo` before the next commands.
+This mode provides a postgres database.
 
 ## START PROJECT IN DEV MODE
 
@@ -26,12 +56,6 @@ npm run docker:dev -- up
 
 ```bash
 npm run docker:prod -- up
-```
-
-## START PROJECT IN TEST MODE
-
-```bash
-npm run test
 ```
 
 ## CLEAN DOCKER CONTAINERS AND OTHER SERVICES
