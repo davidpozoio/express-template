@@ -10,7 +10,6 @@
     "esbuild": "esbuild",
     "start": "./bin/start.sh",
     "test": "vitest",
-    "migrate": "./bin/migrate-knex.sh",
     "biome": "biome",
     "husky": "npx husky init",
     "prisma": "tsx prisma.ts",

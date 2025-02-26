@@ -22,7 +22,10 @@ const appTest = async ({
     ...overrideDatabase,
   });
 
-  databaseConfig.databases[databaseConfig.config.use] = databaseConfigUpdated;
+  databaseConfig.databases[databaseConfig.config.use] = {
+    ...databaseConfig.databases[databaseConfig.config.use],
+    ...databaseConfigUpdated,
+  };
 
   const appModule = await import("@app/app");
 

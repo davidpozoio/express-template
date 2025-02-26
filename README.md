@@ -31,13 +31,7 @@ npm run docker:prod -- up
 ## START PROJECT IN TEST MODE
 
 ```bash
-npm run docker:test
-```
-
-### For watch mode
-
-```bash
-npm run docker:test -- --watchAll
+npm run test
 ```
 
 ## CLEAN DOCKER CONTAINERS AND OTHER SERVICES
@@ -54,50 +48,114 @@ You can config the application using the application.config.yml
 
 ```yml
 application:
-  spa-mode: true
-  test:
-    enable-default-database: true
+  spa:
+    enable: true #enable automatic redirect
+    index: "public/src/frontend/index.html" #set the default redirect path to index
+  database:
+    enable-try-connection: true #you can test if the current database is up
 ```
 
-These are the default values:
-`spa-mode` redirects the default route of the server always to the same index in `public/frontend/index.html`.
-
-`enable-default-database`: this command enables the default test database, you can use this database to do your tests
-
-The other configurations are handled using the `.env` file, this file is recommended to include to .gitignore once you start to create your project.
+The other configurations are handled using the `.env` file and `config/database.config.yml`, these file are recommended to include to .gitignore once you start to create your project.
 
 # ENV
 
-In the last section of the `.env` file you can find CERTS SSL variables, here you have the variable `HTTPS_REDIRECT`, this boolean value enables https default redirection from `http` protocol to `https` protocol, useful for production domains configuration.
+You can configure the server mode, when set the mode as dev you can see specific log info in the response when you get an error.
+In prod mode you can only see a server error without specific information, this is useful for production environments.
 
 ```bash
-######### CERTS SSL ###################
-KEY_SSL_PATH=./certs/key.pem
-CERT_SSL_PATH=./certs/cert.pem
-HTTPS_REDIRECT=false
+######### MODE #######################
+MODE=prod # mode can be dev, prod
+
+```
+
+In this section you can configure the debug port provided for node.
+
+```bash
+######### APP CONFIGURATION ###########
+DEBUG_PORT_CONTAINER=9229
+DEBUG_PORT=9229
+```
+
+Here you can configure the server port the default api prefix and the global rate limit
+
+```bash
+######## SERVER CONFIG ###################
+PORT=8000
+API_PREFIX=/api/v1
+RATE_LIMIT_MAX=200
+```
+
+This is the configuration for the default database provided by docker-compose file, you don't need to do anything here
+
+```bash
+######### DATABASE POSTGRES CONFIG #############
+#don't override these values
+POSTGRES_USER=${DATABASE_USER}
+POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+POSTGRES_DB=${DATABASE_NAME}
+```
+
+This the default database url use for prisma and its migrations
+
+```bash
+DATABASE_URL=postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?schema=public
+```
+
+# DATABASE CONFIG
+
+The file `config/database.config.yml` provides the configuration variables for your databases.
+
+```yaml
+config:
+  use: "dev" #specify what database you want to use
+databases:
+  dev:
+    client: "postgresql" #specify what type of database you use
+    user: root
+    name: postgres
+    host: database
+    port: 5432
+    password: "1234"
+```
+
+You can add new databases after dev default database config like this
+
+```yaml
+dev:
+  client: "postgresql"
+  user: root
+  name: postgres
+  host: database
+  port: 5432
+  password: "1234"
+new-database:
+  client: "mysql"
+  user: root
+  name: mydatabase
+  host: test
+  port: 5433
+  password: "1234"
 ```
 
 # MIGRATIONS
 
-For handling migrations the default system included is `knex`.
+For handling migrations the default system included is `prisma`.
 
-The migrations are saved in the `src/db/migrations`.
+The migrations are saved in the `prisma/migrations`.
 
 Here are the commands.
 
 ```bash
-npm run docker:knex -- "any other command that you want, read knex documentation"
+npm run prisma -- $PRISMA_COMMAND"
 ```
 
-Short command to migrate
+If you're running your database in a private docker network you can use the next command.
 
 ```bash
-npm run migrate -- $YOUR_ACTION $ENV_DATABASE"
+npm run docker:prisma -- $PRISMA_COMMAND
 ```
 
-`$YOUR_ACTION`: here you can put any command that is used with migrate in knex (up, latest, list, etc.).
-
-`$ENV_DATABASE`: specify what database you want to migrate (dev, test).
+You can read prisma documentation to know what commands you can execute
 
 # LINT
 
@@ -115,7 +173,9 @@ The default type of database used is postgresql
 
 ## TESTING
 
-This project uses jest for testing
+This project uses `vitest` and testcontainers for testing. To start your tests you can use the next command.
+
+There are some utils for testing.
 
 ## COMMITS
 
