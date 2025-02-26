@@ -358,3 +358,73 @@ template/node_modules/.prisma/client/schema.prisma'
 [32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T00:06:52.168Z"}
 [32minfo[39m: Database connected! {"timestamp":"2025-02-26T00:06:54.339Z"}
 [32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T00:06:54.342Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T00:26:02.156Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T00:26:04.340Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T00:26:04.343Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:48:23.931Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T01:48:26.101Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T01:48:26.104Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:50:33.672Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:50:35.935Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T01:50:37.968Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T01:50:37.972Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:52:15.419Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:52:25.117Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:52:27.205Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T01:52:29.215Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T01:52:29.220Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:54:46.119Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:54:53.240Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T01:54:57.269Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T01:54:57.273Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:56:34.683Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T01:56:36.897Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T01:56:38.928Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T01:56:38.932Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:09:53.566Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:09:55.652Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T02:09:57.663Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:09:57.666Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:11:02.950Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:11:05.040Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T02:11:07.052Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:11:07.055Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:15:03.603Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:15:05.693Z"}
+[31merror[39m: Error to connect to the database {"timestamp":"2025-02-26T02:15:07.703Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:15:07.706Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:17:28.517Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:17:36.200Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:17:38.336Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:17:38.339Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:18:15.477Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:19:03.557Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:19:05.674Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:19:05.677Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:19:10.101Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:19:12.209Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:19:12.212Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:19:23.254Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:19:25.379Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:19:25.381Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:19:42.256Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:19:44.402Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:19:44.405Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:19:49.305Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:19:51.425Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:19:51.427Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:22:14.597Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:22:16.750Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:22:16.754Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:23:40.685Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:23:42.799Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:23:42.801Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:24:36.491Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:24:38.623Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:24:38.625Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:25:16.530Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:25:18.640Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:25:18.651Z"}
+[32minfo[39m: Trying to connect to "dev" database {"timestamp":"2025-02-26T02:26:32.858Z"}
+[32minfo[39m: Database connected! {"timestamp":"2025-02-26T02:26:35.019Z"}
+[32minfo[39m: The server has started in 8000 {"timestamp":"2025-02-26T02:26:35.021Z"}
