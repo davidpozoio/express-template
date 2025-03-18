@@ -2,8 +2,10 @@ import type { ZodObject } from "zod";
 import asyncErrorController from "../utils/async-error-controller";
 import ValidationErrorException from "../exception/validation-error";
 
+export type ValidateRequestType = "params" | "body" | "query";
+
 interface ValidateRequest<T extends {}> {
-  type: "params" | "body" | "query";
+  type: ValidateRequestType;
   schema: ZodObject<T>;
 }
 
