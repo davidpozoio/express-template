@@ -16,6 +16,8 @@ async function loadPrismaCLI(params: string[]) {
       env: {
         DATABASE_URL: url || DATABASE_ENV().URL,
       },
+      shell: true,
+      stdio: "inherit",
     });
 
     console.log(response.stdout);
