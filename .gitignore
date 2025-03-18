@@ -3,5 +3,5 @@ dist
 ./assets
 ./logs
 bun.lock
-core
+./core
 knexfile.js

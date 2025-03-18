@@ -19,7 +19,7 @@ const validate = <T extends {}>({ type, schema }: ValidateRequest<T>) => {
     try {
       const parsedSchema = typeSchema[type]();
       // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-      (res as any)[type] = { ...parsedSchema };
+      (req as any)[type] = { ...parsedSchema };
       next();
     } catch (error) {
       throw new ValidationErrorException(error);
