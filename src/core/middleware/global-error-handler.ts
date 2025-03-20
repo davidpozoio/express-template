@@ -15,10 +15,10 @@ const globalErrorHandler = async (
   res: Response,
   next: NextFunction,
 ) => {
-  if (error instanceof HttpError) {
+  if (error instanceof ValidationErrorException) {
     res.status(error.statusCode).json({
       error: {
-        data: ENV.MODE === "dev" ? { ...error.errorObject } : undefined,
+        ...error.errorObject,
         message: error.message,
         code: error.code,
       },
@@ -26,10 +26,10 @@ const globalErrorHandler = async (
     return;
   }
 
-  if (error instanceof ValidationErrorException) {
+  if (error instanceof HttpError) {
     res.status(error.statusCode).json({
       error: {
-        ...error.errorObject,
+        data: ENV.MODE === "dev" ? { ...error.errorObject } : undefined,
         message: error.message,
         code: error.code,
       },
