@@ -1,5 +1,5 @@
 config:
-  use: "dev"
+  use: "${USE_DATABASE}"
 databases:
   dev:
     client: "postgresql"
@@ -8,10 +8,5 @@ databases:
     host: database
     port: 5432
     password: "1234"
-  test:
-    client: "postgresql"
-    user: root
-    name: postgres
-    host: testdatabase
-    port: 5432
-    password: "1234"
+  prod:
+    env: 'config/env/.env.prod'

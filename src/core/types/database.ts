@@ -19,5 +19,4 @@ export interface DatabaseConfig {
   host: string;
   port: number;
   password: string;
-  url: string;
 }

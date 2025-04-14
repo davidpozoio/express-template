@@ -11,6 +11,7 @@ export const envScheme = z.object({
   HTTPS_REDIRECT: z.coerce.boolean().default(false),
   API_PREFIX: z.string(),
   RATE_LIMIT_MAX: z.coerce.number().max(200),
+  USE_DATABASE: z.string().max(200),
 });
 
 const ENV = envScheme.parse(process.env);
