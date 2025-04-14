@@ -1,7 +1,8 @@
 node_modules
 dist
 assets/
-logs/
 bun.lock
 ./core
 knexfile.js
+logs/
+.vscode/
