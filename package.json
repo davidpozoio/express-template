@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsx --env-file .env --watch --inspect=0.0.0.0:${DEBUG_PORT_CONTAINER} --nolazy src/server.ts",
+    "dev": "tsx --env-file .env --watch --nolazy src/server.ts",
+    "debug": "tsx --env-file .env --watch --inspect=0.0.0.0:${DEBUG_PORT_CONTAINER} --nolazy src/server.ts",
     "build": "./bin/build.sh",
     "esbuild": "esbuild",
     "start": "./bin/start.sh",
@@ -15,6 +16,7 @@
     "husky": "npx husky init",
     "prisma": "tsx prisma.ts",
     "docker:dev": "./bin/docker-dev.sh",
+    "docker:debug": "./bin/docker-debug.sh",
     "docker:prod": "./bin/docker-prod.sh",
     "docker:clear": "./bin/clear-containers.sh",
     "docker:prisma": "./bin/docker-prisma.sh"
